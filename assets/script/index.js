@@ -2,10 +2,11 @@
 
 let goToAboutMe = Array.from(document.querySelectorAll('.go-to-about'));
 let goToContactMe = Array.from(document.querySelectorAll('.go-to-contact'));
+let copyEmail = Array.from(document.querySelectorAll('.fa-envelope'));
 let replaceNav = document.querySelector('.replace-nav');
 let navMenu = document.querySelector('.nav-menu');
 let aboutMe = document.querySelector('.second');
-let hidden = true;
+let email = 'gnicholauson@gmail.com';
 
 goToAboutMe.forEach( (element) => {
     element.addEventListener('click', () => {
@@ -24,18 +25,25 @@ goToContactMe.forEach( (element) => {
     });
 });
 
-replaceNav.addEventListener('mouseover', () => {
-    navMenu.classList.remove('hidden');
+copyEmail.forEach( (element) => {
+    element.addEventListener('click', () => {
+        navigator.clipboard.writeText(email);
+        alert('Email copied to clipboard');
+    });
 });
 
-replaceNav.addEventListener('mouseout', () => {
-    navMenu.classList.add('hidden');
-});
+replaceNav.addEventListener('mouseover', () => {navShow();});
 
-navMenu.addEventListener('mouseover', () => {
-    navMenu.classList.remove('hidden');
-});
+replaceNav.addEventListener('mouseout', () => {navHide();});
 
-navMenu.addEventListener('mouseout', () => {
-    navMenu.classList.add('hidden');
-});
+navMenu.addEventListener('mouseover', () => {navShow();});
+
+navMenu.addEventListener('mouseout', () => {navHide();});
+
+/*******************
+    Functions
+*******************/
+
+function navHide() {navMenu.classList.add('hidden');}
+
+function navShow() {navMenu.classList.remove('hidden');}
