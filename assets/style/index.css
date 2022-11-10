@@ -1,9 +1,12 @@
 @import './reset.css';
 
 :root {
-    --app-bg: #f7faff;
     --app-header-height: 75px;
-    --app-blue: #3178fe;
+    --app-font-size: 20px;
+    --app-bg: #f7faff;
+    --app-blue: #306ee3;
+    --app-gray: #bbbbbb;
+    --app-footer-font-color: #4f4f4f;
 }
 
 .flexbox {
@@ -28,6 +31,7 @@ body {
 **********************/
 header {
     background-color: var(--app-blue);
+    border-bottom: 1px solid #285ab9;
 }
 
 header div {
@@ -63,7 +67,7 @@ nav ul li:hover {
     background-image: url('../img/banner-image-3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-color: #000;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -82,7 +86,6 @@ nav ul li:hover {
 }
 
 .about-me {
-    font-size: 20px;
     margin-top: 40px;
 }
 
@@ -97,6 +100,10 @@ nav ul li:hover {
 /**********************
     Contact me
 **********************/
+.socials {
+    margin-bottom: 40px;
+}
+
 .icon-links {
     display: grid;
     place-items: center;
@@ -106,6 +113,21 @@ nav ul li:hover {
     font-size: 50px;
 }
 
+/**********************
+    Footer
+**********************/
+footer {
+    background-color: var(--app-gray);
+    border-top: 1px solid var(--app-footer-font-color);
+}
+
+footer div {
+    height: var(--app-header-height);
+}
+
+footer p {
+    color: var(--app-footer-font-color);
+}
 /**********************
     Same Properties
 **********************/
@@ -117,4 +139,8 @@ header, .banner {
 .about-me h2, .socials h2 {
     margin: 40px 0;
     text-align: center;
+}
+
+header ul li, .about-me, footer {
+    font-size: var(--app-font-size);
 }
