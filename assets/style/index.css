@@ -1,0 +1,46 @@
+@import './reset.css';
+
+:root {
+    --app-bg: #f7faff;
+    --app-blue: #3178fe;
+}
+
+.flexbox {
+    display: flex;
+    place-items: center;
+}
+
+body {
+    background-color: var(--app-bg);
+}
+
+/**********************
+    Header
+**********************/
+header {
+    background-color: var(--app-blue);
+    color: #fff;
+}
+
+header div {
+    height: 75px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li + li {
+    margin-left: 15px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
