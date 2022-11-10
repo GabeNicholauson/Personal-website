@@ -21,26 +21,40 @@
     </head>
     <body>
         <main>
-
+            <!----- Header ----->
             <header>
                 <div class="container flexbox">
                     <h2>Gabriel Nicholauson</h2>
-                    <nav>
+                    <nav class="default-nav">
                         <ul class="flexbox">
-                            <li>GitHub</li>
-                            <li>About Me</li>
-                            <li>Contact me</li>
+                            <li><a href="https://github.com/GabeNicholauson" target="blank">GitHub</a></li>
+                            <li class="go-to-about"><a>About Me</a></li>
+                            <li class="go-to-contact"><a>Contact me</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="replace-nav">
+                        <p><i class="fa-solid fa-bars"></i></p>
+                    </nav>
+
+                    <nav class="nav-menu hidden">
+                        <ul class="flexbox">
+                            <li><a href="https://github.com/GabeNicholauson" target="blank">GitHub</a></li>
+                            <li class="go-to-about"><a>About Me</a></li>
+                            <li class="go-to-contact"><a>Contact me</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
 
+            <!----- Hero Banner ----->
             <section class="banner flexbox">
                 <div class="container">
                     <p>Hello world. I am Gabriel Nicholauson, A beginner software developer from Winnipeg, Canada</p>
                 </div>
             </section>
 
+            <!----- About me section ----->
             <article class="about-me">
                 <div class="container">
                     <div class="separate"></div>
@@ -52,23 +66,25 @@
                         and improve my skills so that one day I can become a full-time software developer.
                         I have experience in HTML, CSS, and JavaScript. I hope to broaden my experience and learn even more in the future.
                     </p>
-                    <div class="separate"></div>
+                    <div class="separate second"></div>
                 </div>
             </article>
 
+            <!----- Links to social networks ----->
             <section class="socials">
                 <div class="container">
                     <h2>Contact me</h2>
                     <div class="icon-links">
                         <p>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
+                            <a href="https://github.com/GabeNicholauson" target="blank"><i class="fa-brands fa-github"></i></a>
+                            <a><i class="fa-brands fa-instagram"></i></a>
+                            <a><i class="fa-solid fa-envelope"></i></a>
                         </p>
                     </div>
                 </div>
             </section>
 
+            <!----- Footer ----->
             <footer>
                 <div class="container flexbox">
                     <p>2022, Gabriel Nicholauson</p>
