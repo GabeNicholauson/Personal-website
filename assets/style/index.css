@@ -2,6 +2,7 @@
 
 :root {
     --app-bg: #f7faff;
+    --app-header-height: 75px;
     --app-blue: #3178fe;
 }
 
@@ -19,11 +20,10 @@ body {
 **********************/
 header {
     background-color: var(--app-blue);
-    color: #fff;
 }
 
 header div {
-    height: 75px;
+    height: var(--app-header-height);
 }
 
 nav {
@@ -44,3 +44,27 @@ nav ul li:hover {
     cursor: pointer;
 }
 
+
+/**********************
+    Hero banner
+**********************/
+
+.banner {
+    height: calc(100vh - var(--app-header-height));
+    width: 100%;
+    background-image: url('../img/banner-image-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 40px;
+}
+
+/**********************
+    Same Properties
+**********************/
+
+header, .banner {
+    color: #fff;
+}
